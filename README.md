@@ -1,5 +1,7 @@
 # prometheus-snmp-exporter-synology-ds1621
 
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/2.1.0/wip.svg)](https://www.repostatus.org/#wip)
+
 Prometheus snmp-exporter Docker image with Synology DS-1621+ config baked in.
 
 **Docker Image:** https://hub.docker.com/r/jantman/prometheus-snmp-exporter-synology-ds1621
