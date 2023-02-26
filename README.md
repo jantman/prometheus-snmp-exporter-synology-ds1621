@@ -33,3 +33,7 @@ You can then use a `prometheus.yml` entry like the following, where `MYNAS` is t
     - target_label: __address__
       replacement: 'MYNAS:9116'
 ```
+
+##  Release Process
+
+Tag the repo. [GitHub Actions](https://github.com/jantman/prometheus-snmp-exporter-synology-ds1621/actions) will run a Docker build, push to Docker Hub, and create a release on the repo.
