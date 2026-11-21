@@ -2,12 +2,22 @@
 #############################################
 # Synology
 #
-# Synology MIBs can be found here:
-#   http://www.synology.com/support/snmp_mib.php
-#   http://dedl.synology.com/download/Document/MIBGuide/Synology_MIB_File.zip
+# MIBs are not vendored in this repository. regenerate.sh downloads them with
+# the upstream snmp_exporter generator Makefile at the same tag as the
+# Dockerfile's base image: net-snmp 5.9 MIBs, the IANA ifType MIB, and
+# Synology's official MIB download, with upstream's mib-patches applied:
+#   https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/All/enu/Synology_MIB_File.zip
 #
 # Tested on RS2414rp+ and DS1621+
 #
+# Since snmp_exporter v0.23.0, auth is configured separately from modules.
+# public_v2 is the exporter's default auth name when a scrape sends no "auth"
+# param, so scrape configs only need "module=synology".
+auths:
+  public_v2:
+    community: public
+    version: 2
+
 modules:
   synology:
     max_repetitions: 22
