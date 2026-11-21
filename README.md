@@ -42,7 +42,7 @@ If your NAS uses a community other than `public`, change it in `generator.yml` a
 
 ## Changelog
 
-### 0.2.0 (unreleased)
+### 0.2.0 (2026-11-21)
 
 * Base image `prom/snmp-exporter` v0.21.0 to v0.31.0; `snmp.yml` regenerated with the v0.31.0 generator, using the new `auths`/`modules` format (since v0.23.0).
 * Added `regenerate.sh` and documented where the MIBs come from.
